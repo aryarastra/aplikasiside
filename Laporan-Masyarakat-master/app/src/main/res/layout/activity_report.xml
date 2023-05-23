@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content" app:elevation="0dp">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" app:navigationIcon="@drawable/ic_back">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/black" android:id="@+id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_alignParentStart="true"/>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="70dp">
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp" app:cardCornerRadius="10dp" app:cardElevation="5dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <LinearLayout android:orientation="horizontal" android:background="@android:color/holo_red_light" android:layout_width="match_parent" android:layout_height="50dp">
+                        <ImageView android:layout_gravity="center" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_info" android:layout_marginStart="20dp"/>
+                        <TextView android:textSize="18sp" android:textColor="@color/white" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mohon memberikan informasi yang Valid!" android:layout_marginStart="20dp" android:layout_marginEnd="20dp"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/layoutImage" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="20dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                        <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:text="Unggah Foto Bukti laporan"/>
+                        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="150dp" app:cardCornerRadius="15dp" app:cardElevation="0dp">
+                            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/imageLaporan" android:background="#c1c1c1" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_image_upload" android:adjustViewBounds="true"/>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                        <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nama"/>
+                        <EditText android:textSize="16sp" android:textColor="@color/black" android:id="@+id/inputNama" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Masukan nama Anda" android:maxLines="1" android:singleLine="true" android:imeOptions="actionNext" android:backgroundTint="@android:color/holo_blue_light"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                        <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Telepon"/>
+                        <EditText android:textSize="16sp" android:textColor="@color/black" android:id="@+id/inputTelepon" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Masukan telepon Anda" android:maxLines="1" android:singleLine="true" android:inputType="number" android:imeOptions="actionNext" android:backgroundTint="@android:color/holo_blue_light"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                        <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lokasi"/>
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="50dp">
+                            <EditText android:textSize="16sp" android:textColor="@color/black" android:id="@+id/inputLokasi" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="Masukan lokasi" android:backgroundTint="@android:color/holo_blue_light"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                        <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tanggal"/>
+                        <EditText android:textSize="16sp" android:textColor="@color/black" android:id="@+id/inputTanggal" android:focusableInTouchMode="false" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Masukan tanggal" android:maxLines="1" android:inputType="date" android:imeOptions="actionNext" android:backgroundTint="@android:color/holo_blue_light"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="20dp">
+                        <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Detail"/>
+                        <LinearLayout android:background="@drawable/border_box" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:minHeight="100dp">
+                            <EditText android:textSize="16sp" android:textColor="@color/black" android:gravity="top" android:id="@+id/inputLaporan" android:background="@android:color/transparent" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="5dp" android:hint="Deskripsikan detail" android:layout_marginStart="10dp" android:layout_marginEnd="10dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton android:theme="@style/FabExtendedMaterialTheme" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/white" android:layout_gravity="end|bottom" android:id="@+id/fabSend" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16dp" android:text="Kirim" app:icon="@drawable/ic_send" app:iconTint="@color/white"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
